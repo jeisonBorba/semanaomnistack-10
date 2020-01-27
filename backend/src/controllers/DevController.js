@@ -47,7 +47,7 @@ module.exports = {
         return res.json(dev);
     },
 
-    async delete(req, res) {
+    async destroy(req, res) {
         const { username } = req.params; 
         
         await Dev.remove({ github_username: username });
