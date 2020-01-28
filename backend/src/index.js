@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const http = require('http');
 
+const { port, databaseUrl, databaseUser, databaseKey } = require('./config');
 const { setupWebsocket } = require ('./websocket');
 
 const routes = require('./routes');
@@ -12,7 +13,7 @@ const server = http.Server(app);
 
 setupWebsocket(server);
 
-mongoose.connect('mongodb+srv://jeisonborba:Jerb*191622@node-rest-tutorial-xscss.mongodb.net/week10?retryWrites=true&w=majority', {
+mongoose.connect(`mongodb+srv://${databaseUser}:${databaseKey}@${databaseUrl}`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -25,6 +26,6 @@ app.use(express.json());
 app.use(routes);
 
 
-server.listen(3333, () => {
-    console.log('Server running on port 3333');
+server.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });
