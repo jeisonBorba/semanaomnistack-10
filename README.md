@@ -7,6 +7,7 @@ React / React Native app where you can find developers according preferred techn
 - Expo
 - Geolocation
 - NodeJS
+- Socket.io
 - Axios
 - MongoDB Atlas
 - Mongoose
