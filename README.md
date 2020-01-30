@@ -1,4 +1,4 @@
-# Radar-dev
+# Dev-Radar
 React / React Native app where you can find developers according preferred technologies within a radius of 10KM
 
 ## Technologies
